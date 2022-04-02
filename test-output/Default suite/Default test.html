@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Apr 02 16:57:45 IST 2022</td>
+<td>Started on:</td><td>Sat Apr 02 17:06:25 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>30 seconds (30615 ms)</td>
+<tr><td>Total time:</td><td>77 seconds (77632 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nse.test.LoginTest.validCredentialTest()'><b>validCredentialTest</b><br>Test class: com.nse.test.LoginTest<br>Parameters: Admin123, admin123, https://opensource-demo.orangehrmlive.com/index.php/dashboard</td>
-<td><div><pre>java.lang.AssertionError: expected [https://opensource-demo.orangehrmlive.com/index.php/dashboard] but found [https://opensource-demo.orangehrmlive.com/index.php/auth/validateCredentials]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at com.nse.test.LoginTest.validCredentialTest(LoginTest.java:29)
+<td title='com.nse.test.LoginTest.invalidCredentialTest()'><b>invalidCredentialTest</b><br>Test class: com.nse.test.LoginTest<br>Parameters: null, john123, Invalid credentials</td>
+<td><div><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:92)
+	at com.nse.test.LoginTest.invalidCredentialTest(LoginTest.java:15)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -112,15 +107,10 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace3768050", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace3768050'><pre>java.lang.AssertionError: expected [https://opensource-demo.orangehrmlive.com/index.php/dashboard] but found [https://opensource-demo.orangehrmlive.com/index.php/auth/validateCredentials]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at com.nse.test.LoginTest.validCredentialTest(LoginTest.java:29)
+</pre></div><a href='#' onClick='toggleBox("stack-trace598049166", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace598049166'><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:92)
+	at com.nse.test.LoginTest.invalidCredentialTest(LoginTest.java:15)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -150,8 +140,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>3</td>
-<td>com.nse.test.LoginTest@31fa1761</td></tr>
+<td>9</td>
+<td>com.nse.test.LoginTest@957e06</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -161,10 +151,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nse.test.LoginTest.validCredentialTest()'><b>validCredentialTest</b><br>Test class: com.nse.test.LoginTest<br>Parameters: Admin, admin123, https://opensource-demo.orangehrmlive.com/index.php/dashboard</td>
+<td title='com.nse.test.LoginTest.invalidCredentialTest()'><b>invalidCredentialTest</b><br>Test class: com.nse.test.LoginTest<br>Parameters: peter, peter123, Invalid credentials</td>
 <td></td>
-<td>5</td>
-<td>com.nse.test.LoginTest@31fa1761</td></tr>
+<td>2</td>
+<td>com.nse.test.LoginTest@957e06</td></tr>
+<tr>
+<td title='com.nse.test.LoginTest.invalidCredentialTest()'><b>invalidCredentialTest</b><br>Test class: com.nse.test.LoginTest<br>Parameters: , pass123, Username cannot be empty</td>
+<td></td>
+<td>0</td>
+<td>com.nse.test.LoginTest@957e06</td></tr>
+<tr>
+<td title='com.nse.test.LoginTest.invalidCredentialTest()'><b>invalidCredentialTest</b><br>Test class: com.nse.test.LoginTest<br>Parameters: admin, , Password cannot be empty</td>
+<td></td>
+<td>0</td>
+<td>com.nse.test.LoginTest@957e06</td></tr>
 </table><p>
 </body>
 </html>

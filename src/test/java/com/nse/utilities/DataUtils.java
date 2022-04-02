@@ -22,7 +22,7 @@ public class DataUtils {
 
 	@DataProvider
 	public String[][] invalidCredentialData() {
-		String[][] main = new String[2][3];
+		String[][] main = new String[4][3];
 
 		main[0][0] = "john";
 		main[0][1] = "john123";
@@ -31,6 +31,14 @@ public class DataUtils {
 		main[1][0] = "peter";
 		main[1][1] = "peter123";
 		main[1][2] = "Invalid credentials";
+		
+		main[2][0]="";
+		main[2][1]="pass123";
+		main[2][2]="Username cannot be empty";
+		
+		main[3][0]="admin";
+		main[3][1]="";
+		main[3][2]="Password cannot be empty";
 
 		return main;
 	}
