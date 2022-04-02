@@ -6,25 +6,11 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.nse.base.WebDriverWrapper;
+import com.nse.utilities.DataUtils;
 
 public class LoginTest extends WebDriverWrapper {
 
-	@DataProvider
-	public String[][] invalidCredentialData() {
-		String[][] main = new String[2][3];
-
-		main[0][0] = "john";
-		main[0][1] = "john123";
-		main[0][2] = "Invalid credentials";
-
-		main[1][0] = "peter";
-		main[1][1] = "peter123";
-		main[1][2] = "Invalid credentials";
-
-		return main;
-	}
-
-	@Test(dataProvider = "invalidCredentialData")
+	@Test(dataProviderClass = DataUtils.class, dataProvider = "invalidCredentialData")
 	public void invalidCredentialTest(String username, String password, String expectedTitle) {
 		driver.findElement(By.id("txtUsername")).sendKeys(username);
 		driver.findElement(By.id("txtPassword")).sendKeys(password);
@@ -34,13 +20,13 @@ public class LoginTest extends WebDriverWrapper {
 		Assert.assertEquals(actualError, expectedTitle);
 	}
 
-	@Test
-	public void validCredentialTest() {
-		driver.findElement(By.id("txtUsername")).sendKeys("Admin");
-		driver.findElement(By.id("txtPassword")).sendKeys("admin123");
+	@Test(dataProviderClass = DataUtils.class,dataProvider = "validCredentialData")
+	public void validCredentialTest(String username, String password, String expectedUrl) {
+		driver.findElement(By.id("txtUsername")).sendKeys(username);
+		driver.findElement(By.id("txtPassword")).sendKeys(password);
 		driver.findElement(By.id("btnLogin")).click();
 		// need to provide explicit wait
-		Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/index.php/dashboard");
+		Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
 	}
 
 }
