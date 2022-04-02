@@ -7,15 +7,20 @@ import org.testng.annotations.Test;
 import com.nse.base.WebDriverWrapper;
 
 public class LoginTest extends WebDriverWrapper {
+	
+	//create dataprovider
+	//john, john123, Invalid credentials
+	//peter,peter123, Invalid credentials
+
 
 	@Test
-	public void invalidCredentialTest() {
-		driver.findElement(By.id("txtUsername")).sendKeys("john");
-		driver.findElement(By.id("txtPassword")).sendKeys("john123");
+	public void invalidCredentialTest(String username,String password,String expectedTitle) {
+		driver.findElement(By.id("txtUsername")).sendKeys(username);
+		driver.findElement(By.id("txtPassword")).sendKeys(password);
 		driver.findElement(By.id("btnLogin")).click();
 
 		String actualError = driver.findElement(By.id("spanMessage")).getText();
-		Assert.assertEquals(actualError, "Invalid credentials");
+		Assert.assertEquals(actualError, expectedTitle);
 	}
 	
 	@Test
