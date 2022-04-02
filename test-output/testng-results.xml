@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-04-02T14:32:39 IST" name="Default suite" finished-at="2022-04-02T14:34:16 IST" duration-ms="97433">
+    <groups>
+    </groups>
+    <test started-at="2022-04-02T14:32:39 IST" name="Default test" finished-at="2022-04-02T14:34:16 IST" duration-ms="97433">
+      <class name="com.nse.test.LoginUITest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.nse.test.LoginUITest@4803b726]" started-at="2022-04-02T14:32:39 IST" name="setup" finished-at="2022-04-02T14:33:22 IST" duration-ms="42886" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="UIComponentTest()[pri:0, instance:com.nse.test.LoginUITest@4803b726]" started-at="2022-04-02T14:33:22 IST" name="UIComponentTest" finished-at="2022-04-02T14:33:32 IST" duration-ms="9845" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UIComponentTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.nse.test.LoginUITest@4803b726]" started-at="2022-04-02T14:33:32 IST" name="teardown" finished-at="2022-04-02T14:33:42 IST" duration-ms="10344" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.nse.test.LoginUITest@4803b726]" started-at="2022-04-02T14:33:42 IST" name="setup" finished-at="2022-04-02T14:34:01 IST" duration-ms="18577" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validateTitleTest()[pri:0, instance:com.nse.test.LoginUITest@4803b726]" started-at="2022-04-02T14:34:01 IST" name="validateTitleTest" finished-at="2022-04-02T14:34:10 IST" duration-ms="9355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTitleTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.nse.test.LoginUITest@4803b726]" started-at="2022-04-02T14:34:10 IST" name="teardown" finished-at="2022-04-02T14:34:16 IST" duration-ms="6371" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.nse.test.LoginUITest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
