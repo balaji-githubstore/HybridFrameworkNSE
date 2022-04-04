@@ -18,11 +18,19 @@ public class Demo1 {
 		
 		XSSFSheet sheet=  book.getSheet("invalidCredentialTest");
 		
-		String cellValue= sheet.getRow(2).getCell(0).getStringCellValue();
+		String[][] main=new String[2][3];
 		
-		System.out.println(cellValue);
+		for(int r=1;r<3;r++)
+		{
+			for(int c=0;c<3;c++)
+			{
+				String cellValue= sheet.getRow(r).getCell(c).getStringCellValue();
+				System.out.println(cellValue);
+				main[r-1][c]=cellValue;
+			}
+		}
 		
-		
+		System.out.println(main);
 		
 	}
 
