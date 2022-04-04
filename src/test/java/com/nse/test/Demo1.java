@@ -18,14 +18,16 @@ public class Demo1 {
 		
 		XSSFSheet sheet=  book.getSheet("invalidCredentialTest");
 		
-		String[][] main=new String[2][3];
+		int rowCount=sheet.getPhysicalNumberOfRows();
+		int cellCount=sheet.getRow(0).getPhysicalNumberOfCells();
 		
-		for(int r=1;r<3;r++)
+		String[][] main=new String[rowCount-1][cellCount];
+		
+		for(int r=1;r<rowCount;r++)
 		{
-			for(int c=0;c<3;c++)
+			for(int c=0;c<cellCount;c++)
 			{
 				String cellValue= sheet.getRow(r).getCell(c).getStringCellValue();
-				System.out.println(cellValue);
 				main[r-1][c]=cellValue;
 			}
 		}
