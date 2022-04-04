@@ -9,16 +9,16 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtils {
 
-	public static String[][] getSheetIntoTwoDimArray(String path,String sheetName) throws IOException {
-		
+	public static String[][] getSheetIntoTwoDimArray(String path, String sheetName) throws IOException {
+
 		FileInputStream file = new FileInputStream(path);
 		XSSFWorkbook book = new XSSFWorkbook(file);
 		XSSFSheet sheet = book.getSheet(sheetName);
 		int rowCount = sheet.getPhysicalNumberOfRows();
 		int cellCount = sheet.getRow(0).getPhysicalNumberOfCells();
-		
+
 		String[][] main = new String[rowCount - 1][cellCount];
-		
+
 		DataFormatter format = new DataFormatter();
 		for (int r = 1; r < rowCount; r++) {
 			for (int c = 0; c < cellCount; c++) {
@@ -27,9 +27,9 @@ public class ExcelUtils {
 		}
 		book.close();
 		file.close();
-		
+
 		return main;
-		
+
 	}
 
 }
