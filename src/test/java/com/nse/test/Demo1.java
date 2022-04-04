@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -23,12 +24,13 @@ public class Demo1 {
 		
 		String[][] main=new String[rowCount-1][cellCount];
 		
+		DataFormatter format =new DataFormatter();
+		
 		for(int r=1;r<rowCount;r++)
 		{
 			for(int c=0;c<cellCount;c++)
 			{
-				String cellValue= sheet.getRow(r).getCell(c).getStringCellValue();
-				main[r-1][c]=cellValue;
+				main[r-1][c]=format.formatCellValue(sheet.getRow(r).getCell(c));
 			}
 		}
 		
