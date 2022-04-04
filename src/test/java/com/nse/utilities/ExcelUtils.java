@@ -25,8 +25,11 @@ public class ExcelUtils {
 				main[r - 1][c] = format.formatCellValue(sheet.getRow(r).getCell(c));
 			}
 		}
+		book.close();
+		file.close();
 		
 		return main;
+		
 	}
 
 }
