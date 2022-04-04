@@ -10,7 +10,7 @@ import com.nse.utilities.DataUtils;
 
 public class LoginTest extends WebDriverWrapper {
 
-	@Test(dataProviderClass = DataUtils.class, dataProvider = "invalidCredentialData")
+	@Test(dataProviderClass = DataUtils.class, dataProvider = "commonDataProvider")
 	public void invalidCredentialTest(String username, String password, String expectedTitle) {
 		driver.findElement(By.id("txtUsername")).sendKeys(username);
 		driver.findElement(By.id("txtPassword")).sendKeys(password);
@@ -20,7 +20,7 @@ public class LoginTest extends WebDriverWrapper {
 		Assert.assertEquals(actualError, expectedTitle);
 	}
 
-	@Test(dataProviderClass = DataUtils.class,dataProvider = "validCredentialData")
+	@Test(dataProviderClass = DataUtils.class, dataProvider = "commonDataProvider")
 	public void validCredentialTest(String username, String password, String expectedUrl) {
 		driver.findElement(By.id("txtUsername")).sendKeys(username);
 		driver.findElement(By.id("txtPassword")).sendKeys(password);

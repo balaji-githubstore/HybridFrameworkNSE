@@ -7,7 +7,7 @@
         <methods>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="addEmployeeTest"/>
+          <include name="addEmployeeTest" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- com.nse.test.EmployeeTest -->
     </classes>
