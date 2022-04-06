@@ -56,7 +56,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -105,6 +105,16 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.nse.test.LoginUITest" class="method navigator-link" hash-for-method="UIComponentTest">UIComponentTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.nse.test.LoginUITest" class="method navigator-link" hash-for-method="UIComponentTest">UIComponentTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.nse.test.LoginUITest" class="method navigator-link" hash-for-method="validateTitleTest">validateTitleTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -139,6 +149,20 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="UIComponentTest">
+                  </a> <!-- UIComponentTest -->
+                  <span class="method-name">UIComponentTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateTitleTest">
+                  </a> <!-- validateTitleTest -->
+                  <span class="method-name">validateTitleTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="validateTitleTest">
                   </a> <!-- validateTitleTest -->
                   <span class="method-name">validateTitleTest</span>
@@ -155,13 +179,19 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Orange HRM Test&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;ff&quot;/&gt;
+&lt;suite parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Login UI Edge&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.nse.test.LoginUITest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Orange HRM Test --&gt;
+  &lt;/test&gt; &lt;!-- Login UI Edge --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Login UI Chrome&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;ch&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.nse.test.LoginUITest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Login UI Chrome --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -173,7 +203,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Orange HRM Test (1 class)</span>
+                <span class="test-name">Login UI Edge (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Login UI Chrome (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -199,20 +232,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'UIComponentTest')
 data.setCell(0, 2, 'com.nse.test.LoginUITest')
-data.setCell(0, 3, 247);
+data.setCell(0, 3, 373);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validateTitleTest')
+data.setCell(1, 1, 'UIComponentTest')
 data.setCell(1, 2, 'com.nse.test.LoginUITest')
-data.setCell(1, 3, 7);
+data.setCell(1, 3, 277);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'validateTitleTest')
+data.setCell(2, 2, 'com.nse.test.LoginUITest')
+data.setCell(2, 3, 12);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'validateTitleTest')
+data.setCell(3, 2, 'com.nse.test.LoginUITest')
+data.setCell(3, 3, 11);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 254 ms</span>
+              <span class="suite-total-time">Total running time: 25 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -240,28 +281,52 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.nse.test.LoginUITest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup(ff)</span>
+                <span class="method-name">setup(edge)</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(ch)</span>
+                <span class="method-start">41 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">UIComponentTest</span>
-                <span class="method-start">23381 ms</span>
+                <span class="method-start">10224 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">23632 ms</span>
+                <span class="method-start">10602 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setup(ff)</span>
-                <span class="method-start">25044 ms</span>
+                <span class="method-name">setup(ch)</span>
+                <span class="method-start">10997 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">UIComponentTest</span>
+                <span class="method-start">14272 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">14554 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(edge)</span>
+                <span class="method-start">14960 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">validateTitleTest</span>
-                <span class="method-start">37381 ms</span>
+                <span class="method-start">20359 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">37399 ms</span>
+                <span class="method-start">20372 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">validateTitleTest</span>
+                <span class="method-start">24958 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">24976 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
