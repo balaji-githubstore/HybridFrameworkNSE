@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Orange HRM Test(failed)">
+    <parameter name="browser" value="edge"/>
     <classes>
-      <class name="com.nse.test.EmployeeTest">
+      <class name="com.nse.test.LoginUITest">
         <methods>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="addEmployeeTest" invocation-numbers="0 1"/>
+          <include name="validateTitleTest"/>
+          <include name="UIComponentTest"/>
         </methods>
-      </class> <!-- com.nse.test.EmployeeTest -->
+      </class> <!-- com.nse.test.LoginUITest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Orange HRM Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
