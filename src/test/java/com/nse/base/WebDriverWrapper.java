@@ -29,8 +29,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class WebDriverWrapper {
 	protected WebDriver driver;
 
-	public static ExtentReports extent;
-	public static ExtentTest extentTest;
+	private static ExtentReports extent;
+	protected static ExtentTest extentTest;
 
 	@BeforeSuite
 	public void init() {

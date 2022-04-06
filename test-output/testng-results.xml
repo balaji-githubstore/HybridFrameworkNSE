@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-06T20:23:11 IST" name="Default suite" finished-at="2022-04-06T20:23:52 IST" duration-ms="40782">
+  <suite started-at="2022-04-06T20:28:10 IST" name="Default suite" finished-at="2022-04-06T20:28:47 IST" duration-ms="36677">
     <groups>
     </groups>
-    <test started-at="2022-04-06T20:23:11 IST" name="Default test" finished-at="2022-04-06T20:23:52 IST" duration-ms="40782">
+    <test started-at="2022-04-06T20:28:10 IST" name="Default test" finished-at="2022-04-06T20:28:47 IST" duration-ms="36677">
       <class name="com.nse.test.LoginTest">
-        <test-method is-config="true" signature="init()[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:23:10 IST" name="init" finished-at="2022-04-06T20:23:11 IST" duration-ms="423" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:28:10 IST" name="init" finished-at="2022-04-06T20:28:10 IST" duration-ms="426" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:23:12 IST" name="setup" finished-at="2022-04-06T20:23:19 IST" duration-ms="7387" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:28:12 IST" name="setup" finished-at="2022-04-06T20:28:19 IST" duration-ms="7137" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="invalidCredentialTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:23:19 IST" name="invalidCredentialTest" data-provider="commonDataProvider" finished-at="2022-04-06T20:23:21 IST" duration-ms="1702" status="PASS">
+        <test-method signature="invalidCredentialTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:28:19 IST" name="invalidCredentialTest" data-provider="commonDataProvider" finished-at="2022-04-06T20:28:20 IST" duration-ms="1788" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -48,7 +48,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidCredentialTest -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:23:21 IST" name="teardown" finished-at="2022-04-06T20:23:22 IST" duration-ms="576" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:28:20 IST" name="teardown" finished-at="2022-04-06T20:28:21 IST" duration-ms="597" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -59,7 +59,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:23:22 IST" name="setup" finished-at="2022-04-06T20:23:28 IST" duration-ms="6729" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:28:21 IST" name="setup" finished-at="2022-04-06T20:28:27 IST" duration-ms="6143" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -75,7 +75,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="invalidCredentialTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:23:28 IST" name="invalidCredentialTest" data-provider="commonDataProvider" finished-at="2022-04-06T20:23:33 IST" duration-ms="4213" status="PASS">
+        <test-method signature="invalidCredentialTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:28:27 IST" name="invalidCredentialTest" data-provider="commonDataProvider" finished-at="2022-04-06T20:28:29 IST" duration-ms="1836" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -96,7 +96,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidCredentialTest -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:23:33 IST" name="teardown" finished-at="2022-04-06T20:23:33 IST" duration-ms="576" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:28:29 IST" name="teardown" finished-at="2022-04-06T20:28:30 IST" duration-ms="522" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -107,7 +107,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:23:33 IST" name="setup" finished-at="2022-04-06T20:23:40 IST" duration-ms="6826" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:28:30 IST" name="setup" finished-at="2022-04-06T20:28:36 IST" duration-ms="6340" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -123,7 +123,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="invalidCredentialTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:23:40 IST" name="invalidCredentialTest" data-provider="commonDataProvider" finished-at="2022-04-06T20:23:42 IST" duration-ms="1937" status="PASS">
+        <test-method signature="invalidCredentialTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:28:36 IST" name="invalidCredentialTest" data-provider="commonDataProvider" finished-at="2022-04-06T20:28:38 IST" duration-ms="1820" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -144,7 +144,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidCredentialTest -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:23:42 IST" name="teardown" finished-at="2022-04-06T20:23:43 IST" duration-ms="560" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:28:38 IST" name="teardown" finished-at="2022-04-06T20:28:38 IST" duration-ms="542" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -155,7 +155,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:23:43 IST" name="setup" finished-at="2022-04-06T20:23:49 IST" duration-ms="6456" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:28:38 IST" name="setup" finished-at="2022-04-06T20:28:45 IST" duration-ms="6289" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -171,7 +171,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validCredentialTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:23:49 IST" name="validCredentialTest" data-provider="commonDataProvider" finished-at="2022-04-06T20:23:51 IST" duration-ms="2033" status="FAIL">
+        <test-method signature="validCredentialTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:28:45 IST" name="validCredentialTest" data-provider="commonDataProvider" finished-at="2022-04-06T20:28:47 IST" duration-ms="1957" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -201,7 +201,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 at org.testng.Assert.assertEquals(Assert.java:131)
 at org.testng.Assert.assertEquals(Assert.java:655)
 at org.testng.Assert.assertEquals(Assert.java:665)
-at com.nse.test.LoginTest.validCredentialTest(LoginTest.java:29)
+at com.nse.test.LoginTest.validCredentialTest(LoginTest.java:38)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -236,7 +236,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validCredentialTest -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:23:51 IST" name="teardown" finished-at="2022-04-06T20:23:52 IST" duration-ms="515" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:28:47 IST" name="teardown" finished-at="2022-04-06T20:28:47 IST" duration-ms="515" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -247,7 +247,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="end()[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:23:52 IST" name="end" finished-at="2022-04-06T20:23:52 IST" duration-ms="508" status="PASS">
+        <test-method is-config="true" signature="end()[pri:0, instance:com.nse.test.LoginTest@5677323c]" started-at="2022-04-06T20:28:47 IST" name="end" finished-at="2022-04-06T20:28:48 IST" duration-ms="539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
