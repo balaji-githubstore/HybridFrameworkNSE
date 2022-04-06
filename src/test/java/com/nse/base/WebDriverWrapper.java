@@ -1,24 +1,52 @@
 package com.nse.base;
 
+import java.lang.reflect.Method;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class WebDriverWrapper {
 	protected WebDriver driver;
 
+	public static ExtentReports extent;
+	public static ExtentTest extentTest;
+	
+	@BeforeSuite
+	public void init() {
+		extent = new ExtentReports();
+		ExtentSparkReporter spark = new ExtentSparkReporter("target/Spark.html");
+		extent.attachReporter(spark);
+	}
+
+	@AfterSuite
+	public void end() {
+		extent.flush();
+	}
+
 	@BeforeMethod
 	@Parameters({ "browser" })
-	public void setup(@Optional("ch") String browserName) {
+	public void setup(@Optional("ch") String browserName,Method method) {
+		
+		extentTest=extent.createTest(method.getName());
 
 		if (browserName.equalsIgnoreCase("edge")) {
 			WebDriverManager.edgedriver().setup();
@@ -35,10 +63,23 @@ public class WebDriverWrapper {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.get("https://opensource-demo.orangehrmlive.com/");
+		
+		
 	}
 
 	@AfterMethod
-	public void teardown() {
+	public void teardown(ITestResult result) {
+		
+		if (result.getStatus() == ITestResult.FAILURE) {
+			extentTest.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " FAILED ", ExtentColor.RED));
+			extentTest.fail(result.getThrowable());
+		} else if (result.getStatus() == ITestResult.SUCCESS) {
+			extentTest.log(Status.PASS, MarkupHelper.createLabel(result.getName() + " PASSED ", ExtentColor.GREEN));
+		} else {
+			extentTest.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " SKIPPED ", ExtentColor.ORANGE));
+			extentTest.skip(result.getThrowable());
+		}
+		
 		driver.quit();
 	}
 
