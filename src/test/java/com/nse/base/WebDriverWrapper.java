@@ -3,6 +3,8 @@ package com.nse.base;
 import java.lang.reflect.Method;
 import java.time.Duration;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -29,7 +31,7 @@ public class WebDriverWrapper {
 
 	public static ExtentReports extent;
 	public static ExtentTest extentTest;
-	
+
 	@BeforeSuite
 	public void init() {
 		extent = new ExtentReports();
@@ -44,9 +46,9 @@ public class WebDriverWrapper {
 
 	@BeforeMethod
 	@Parameters({ "browser" })
-	public void setup(@Optional("ch") String browserName,Method method) {
-		
-		extentTest=extent.createTest(method.getName());
+	public void setup(@Optional("ch") String browserName, Method method) {
+
+		extentTest = extent.createTest(method.getName());
 
 		if (browserName.equalsIgnoreCase("edge")) {
 			WebDriverManager.edgedriver().setup();
@@ -63,13 +65,12 @@ public class WebDriverWrapper {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.get("https://opensource-demo.orangehrmlive.com/");
-		
-		
+
 	}
 
 	@AfterMethod
 	public void teardown(ITestResult result) {
-		
+
 		if (result.getStatus() == ITestResult.FAILURE) {
 			extentTest.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " FAILED ", ExtentColor.RED));
 			extentTest.fail(result.getThrowable());
@@ -79,7 +80,11 @@ public class WebDriverWrapper {
 			extentTest.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " SKIPPED ", ExtentColor.ORANGE));
 			extentTest.skip(result.getThrowable());
 		}
-		
+
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		String base64String = ts.getScreenshotAs(OutputType.BASE64);
+		extentTest.addScreenCaptureFromBase64String(base64String, result.getName());
+
 		driver.quit();
 	}
 

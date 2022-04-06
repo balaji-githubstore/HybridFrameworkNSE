@@ -10,7 +10,7 @@ public class LoginUITest extends WebDriverWrapper {
 	
 	@Test
 	public void validateTitleTest() {
-		Assert.assertEquals(driver.getTitle(), "OrangeHRM12");
+		Assert.assertEquals(driver.getTitle(), "OrangeHRM");
 	}
 
 	@Test
