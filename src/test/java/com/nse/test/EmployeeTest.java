@@ -4,7 +4,9 @@ import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import com.nse.base.WebDriverWrapper;
+import com.nse.pages.AddEmployeePage;
 import com.nse.pages.LoginPage;
+import com.nse.pages.OrangePortalPage;
 import com.nse.utilities.DataUtils;
 
 public class EmployeeTest extends WebDriverWrapper {
@@ -16,9 +18,13 @@ public class EmployeeTest extends WebDriverWrapper {
 		login.enterUsername(username);
 		login.enterPassword(password);
 		login.clickOnLogin();	
-		driver.findElement(By.partialLinkText("PIM")).click();
-		driver.findElement(By.linkText("Add Employee")).click();
-		driver.findElement(By.id("firstName")).sendKeys(firstName);
+		
+		OrangePortalPage portal=new OrangePortalPage(driver);
+		portal.clickOnPIM();
+		portal.clickOnAddEmployee();
+		
+		AddEmployeePage empPage=new AddEmployeePage(driver);
+		empPage.enterFirstName(firstName);
 		//complete remaining steps
 		
 	}
