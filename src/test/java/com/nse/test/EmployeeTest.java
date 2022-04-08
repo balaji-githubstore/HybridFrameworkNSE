@@ -1,6 +1,5 @@
 package com.nse.test;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import com.nse.base.WebDriverWrapper;

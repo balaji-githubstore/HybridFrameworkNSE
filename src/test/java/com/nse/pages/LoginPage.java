@@ -3,7 +3,9 @@ package com.nse.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+import com.nse.base.WebDriverKeywords;
+
+public class LoginPage extends WebDriverKeywords {
 	private By usernameLocator = By.id("txtUsername");
 	private By passwordLocator = By.id("txtPassword");
 	private By loginLocator = By.name("Submit");
@@ -12,22 +14,23 @@ public class LoginPage {
 	private WebDriver driver;
 
 	public LoginPage(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 	}
 
 	public void enterUsername(String username) {
-		driver.findElement(usernameLocator).sendKeys(username);
+		typeOnElement(usernameLocator, username);
 	}
 
 	public void enterPassword(String password) {
-		driver.findElement(passwordLocator).sendKeys(password);
+		typeOnElement(passwordLocator, password);
 	}
 
 	public void clickOnLogin() {
-		driver.findElement(loginLocator).click();
+		clickOnElement(loginLocator);
 	}
 
 	public String getInvalidCredentialErrorMessage() {
-		return driver.findElement(errorLocator).getText();
+		return getElementText(errorLocator);
 	}
 }
