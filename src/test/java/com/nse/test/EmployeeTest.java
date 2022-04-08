@@ -12,9 +12,10 @@ public class EmployeeTest extends WebDriverWrapper {
 	@Test(dataProviderClass = DataUtils.class, dataProvider = "commonDataProvider")
 	public void addEmployeeTest(String username,String password,String firstName)
 	{
-		LoginPage.enterUsername(driver, username);
-		driver.findElement(By.id("txtPassword")).sendKeys(password);
-		driver.findElement(By.id("btnLogin")).click();
+		LoginPage login=new LoginPage(driver);
+		login.enterUsername(username);
+		login.enterPassword(password);
+		login.clickOnLogin();	
 		driver.findElement(By.partialLinkText("PIM")).click();
 		driver.findElement(By.linkText("Add Employee")).click();
 		driver.findElement(By.id("firstName")).sendKeys(firstName);

@@ -4,20 +4,26 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
+	
+	private WebDriver driver;
+	public LoginPage(WebDriver driver)
+	{
+		this.driver=driver;
+	}
 
-	public static void enterUsername(WebDriver driver, String username) {
+	public void enterUsername(String username) {
 		driver.findElement(By.id("txtUsername")).sendKeys(username);
 	}
 
-	public static void enterPassword(WebDriver driver, String password) {
+	public void enterPassword(String password) {
 		driver.findElement(By.id("txtPassword")).sendKeys(password);
 	}
 
-	public static void clickOnLogin(WebDriver driver) {
+	public void clickOnLogin() {
 		driver.findElement(By.id("btnLogin")).click();
 	}
 
-	public static String getInvalidCredentialErrorMessage(WebDriver driver)
+	public String getInvalidCredentialErrorMessage()
 	{
 		return driver.findElement(By.id("spanMessage")).getText();
 	}
