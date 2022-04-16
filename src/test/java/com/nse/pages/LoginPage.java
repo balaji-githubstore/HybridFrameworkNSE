@@ -10,6 +10,7 @@ public class LoginPage extends WebDriverKeywords {
 	private By passwordLocator = By.id("txtPassword");
 	private By loginLocator = By.name("Submit");
 	private By errorLocator = By.id("spanMessage");
+	private By linkedinLocator=By.xpath("//img[@alt='LinkedIn OrangeHRM group']");
 
 	private WebDriver driver;
 
@@ -33,4 +34,13 @@ public class LoginPage extends WebDriverKeywords {
 	public String getInvalidCredentialErrorMessage() {
 		return getElementText(errorLocator);
 	}
+	
+	public void clickOnLinkedinIcon()
+	{
+		clickOnElement(linkedinLocator);
+	}
+	
+	
+	
+	
 }

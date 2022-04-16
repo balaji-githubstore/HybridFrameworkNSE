@@ -1,5 +1,8 @@
 package com.nse.base;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -24,4 +27,16 @@ public class WebDriverKeywords {
 		return driver.findElement(locator).getText();
 	}
 
+	public void switchToWindowUsingTitle(String title)
+	{
+
+		for (String window : driver.getWindowHandles()) 
+		{
+			System.out.println(window);
+			driver.switchTo().window(window);
+			if (driver.getTitle().equals(title)) {
+				break;
+			}
+		}
+	}
 }

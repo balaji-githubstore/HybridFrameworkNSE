@@ -21,7 +21,7 @@ public class DataUtils {
 //	}
 
 	@DataProvider
-	public String[][] commonDataProvider(Method method) throws IOException {
+	public String[][] commonDataProvider(Method method) throws Exception {
 		
 		//testMethodName and sheetname should be same
 		String testMethodName=method.getName();

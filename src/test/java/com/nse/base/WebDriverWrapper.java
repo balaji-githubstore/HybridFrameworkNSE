@@ -65,7 +65,7 @@ public class WebDriverWrapper {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.get("https://opensource-demo.orangehrmlive.com/");
-
+	
 	}
 
 	@AfterMethod
