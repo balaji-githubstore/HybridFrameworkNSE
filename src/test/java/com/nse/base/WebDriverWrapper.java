@@ -1,5 +1,6 @@
 package com.nse.base;
 
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.time.Duration;
 
@@ -23,6 +24,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.nse.utilities.PropUtils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -45,10 +47,16 @@ public class WebDriverWrapper {
 	}
 
 	@BeforeMethod
-	@Parameters({ "browser" })
-	public void setup(@Optional("ch") String browserName, Method method) {
+	@Parameters({ "browser","url" })
+	public void setup(@Optional("ch") String browserName,@Optional("https://opensource-demo.orangehrmlive.com/") String url, Method method) throws IOException {
 
 		extentTest = extent.createTest(method.getName());
+		
+		if(PropUtils.getPropertiesValue("properties_preference").equals("yes"))
+		{
+			browserName=PropUtils.getPropertiesValue("browser");
+			url=PropUtils.getPropertiesValue("url");
+		}
 
 		if (browserName.equalsIgnoreCase("edge")) {
 			WebDriverManager.edgedriver().setup();
