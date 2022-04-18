@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Balaji\AppData\Local\Temp\testng-eclipse-613373077\testng-customsuite.xml</span>
+                    <span>C:\Users\Balaji\AppData\Local\Temp\testng-eclipse--913854588\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,17 +104,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.nse.test.LoginTest" class="method navigator-link" hash-for-method="invalidCredentialTest(Peter, 123, Invalid credentials)">invalidCredentialTest(Peter, 123, Invalid credentials)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.nse.test.LoginTest" class="method navigator-link" hash-for-method="invalidCredentialTest(Har, admin123, Invalid credentials)">invalidCredentialTest(Har, admin123, Invalid credentials)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.nse.test.LoginTest" class="method navigator-link" hash-for-method="invalidCredentialTest(Balaji, admin123, Invalid credentials)">invalidCredentialTest(Balaji, admin123, Invalid credentials)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.nse.test.LoginUITest" class="method navigator-link" hash-for-method="linkedInIconLinkTest">linkedInIconLinkTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -132,31 +122,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.nse.test.LoginTest</span>
+              <span class="class-name">com.nse.test.LoginUITest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="invalidCredentialTest(Peter, 123, Invalid credentials)">
-                  </a> <!-- invalidCredentialTest(Peter, 123, Invalid credentials) -->
-                  <span class="method-name">invalidCredentialTest</span>
-                  <span class="parameters">(Peter, 123, Invalid credentials)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="invalidCredentialTest(Har, admin123, Invalid credentials)">
-                  </a> <!-- invalidCredentialTest(Har, admin123, Invalid credentials) -->
-                  <span class="method-name">invalidCredentialTest</span>
-                  <span class="parameters">(Har, admin123, Invalid credentials)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="invalidCredentialTest(Balaji, admin123, Invalid credentials)">
-                  </a> <!-- invalidCredentialTest(Balaji, admin123, Invalid credentials) -->
-                  <span class="method-name">invalidCredentialTest</span>
-                  <span class="parameters">(Balaji, admin123, Invalid credentials)</span>
+                  <a name="linkedInIconLinkTest">
+                  </a> <!-- linkedInIconLinkTest -->
+                  <span class="method-name">linkedInIconLinkTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -164,7 +137,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Balaji\AppData\Local\Temp\testng-eclipse-613373077\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Balaji\AppData\Local\Temp\testng-eclipse--913854588\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -173,11 +146,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nse.test.LoginTest&quot;&gt;
+      &lt;class name=&quot;com.nse.test.LoginUITest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;invalidCredentialTest&quot;/&gt;
+          &lt;include name=&quot;linkedInIconLinkTest&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.nse.test.LoginTest --&gt;
+      &lt;/class&gt; &lt;!-- com.nse.test.LoginUITest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -217,24 +190,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'invalidCredentialTest')
-data.setCell(0, 2, 'com.nse.test.LoginTest')
-data.setCell(0, 3, 299318);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'invalidCredentialTest')
-data.setCell(1, 2, 'com.nse.test.LoginTest')
-data.setCell(1, 3, 9269);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'invalidCredentialTest')
-data.setCell(2, 2, 'com.nse.test.LoginTest')
-data.setCell(2, 3, 6546);
+data.setCell(0, 1, 'linkedInIconLinkTest')
+data.setCell(0, 2, 'com.nse.test.LoginUITest')
+data.setCell(0, 3, 44279);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 44 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -249,13 +214,15 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.nse.test.LoginTest</span>
+              <span class="ignored-class-name">com.nse.test.LoginUITest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">validCredentialTest</span>
+                <span class="ignored-method-name">UIComponentTest</span>
+                <br/>
+                <span class="ignored-method-name">validateTitleTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -267,50 +234,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nse.test.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nse.test.LoginUITest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">init</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">setup(ch, public void com.nse.test.LoginTest.invalidCredentialTest(java.lang.String,java.lang.String,java....)</span>
-                <span class="method-start">5889 ms</span>
+                <span class="method-name">setup(ch, public void com.nse.test.LoginUITest.linkedInIconLinkTest())</span>
+                <span class="method-start">639 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">invalidCredentialTest(Peter, 123, Invalid credentials)</span>
-                <span class="method-start">19240 ms</span>
+                <span class="method-name">linkedInIconLinkTest</span>
+                <span class="method-start">10005 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">teardown([TestResult name=invalidCredentialTest status=SUCCESS method=LoginTest.invalidCredentialTest(java.la...)</span>
-                <span class="method-start">318562 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(ch, public void com.nse.test.LoginTest.invalidCredentialTest(java.lang.String,java.lang.String,java....)</span>
-                <span class="method-start">322275 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">invalidCredentialTest(Balaji, admin123, Invalid credentials)</span>
-                <span class="method-start">331646 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown([TestResult name=invalidCredentialTest status=SUCCESS method=LoginTest.invalidCredentialTest(java.la...)</span>
-                <span class="method-start">340920 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(ch, public void com.nse.test.LoginTest.invalidCredentialTest(java.lang.String,java.lang.String,java....)</span>
-                <span class="method-start">343739 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">invalidCredentialTest(Har, admin123, Invalid credentials)</span>
-                <span class="method-start">350973 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown([TestResult name=invalidCredentialTest status=SUCCESS method=LoginTest.invalidCredentialTest(java.la...)</span>
-                <span class="method-start">357520 ms</span>
+                <span class="method-name">teardown([TestResult name=linkedInIconLinkTest status=SUCCESS method=LoginUITest.linkedInIconLinkTest()[pri:0...)</span>
+                <span class="method-start">54290 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">end</span>
-                <span class="method-start">364542 ms</span>
+                <span class="method-start">54934 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
