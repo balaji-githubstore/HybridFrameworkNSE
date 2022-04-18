@@ -52,7 +52,7 @@ public class WebDriverWrapper {
 
 		extentTest = extent.createTest(method.getName());
 		
-		if(PropUtils.getPropertiesValue("properties_preference").equals("yes"))
+		if(PropUtils.getPropertiesValue("properties_preference").equalsIgnoreCase("no"))
 		{
 			browserName=PropUtils.getPropertiesValue("browser");
 			url=PropUtils.getPropertiesValue("url");
