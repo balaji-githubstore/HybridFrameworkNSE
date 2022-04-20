@@ -49,7 +49,7 @@ public class WebDriverWrapper {
 
 	@BeforeMethod
 	@Parameters({ "browser", "url", "headless" })
-	public void setup(@Optional("ch") String browserName,@Optional("https://opensource-demo.orangehrmlive.com/") String url,@Optional("no") String headless, Method method) throws IOException {
+	public void setup(@Optional("ch") String browserName,@Optional("https://opensource-demo.orangehrmlive.com/") String url,@Optional("false") String headless, Method method) throws IOException {
 
 		extentTest = extent.createTest(method.getName());
 		
@@ -69,7 +69,7 @@ public class WebDriverWrapper {
 		} else {
 			
 			ChromeOptions options=new ChromeOptions();
-			if(headless.equalsIgnoreCase("yes"))
+			if(headless.equalsIgnoreCase("true"))
 			{
 				options.addArguments("--headless");
 			}
