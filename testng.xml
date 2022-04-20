@@ -3,7 +3,7 @@
 <suite name="Suite">
 
 	<test thread-count="5" name="Login UI Edge">
-		<parameter name="browser" value="edge"></parameter>
+		<parameter name="browser" value="ch"></parameter>
 		<classes>
 			<class name="com.nse.test.LoginUITest" />
 		</classes>

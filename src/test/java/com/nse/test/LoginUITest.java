@@ -42,6 +42,7 @@ public class LoginUITest extends WebDriverWrapper {
 		
 		login.switchToWindowUsingTitle("Sign Up | LinkedIn");
 		
+		
 		LinkedInPage linPage=new LinkedInPage(driver);
 		Assert.assertEquals(linPage.getLinkdeinPageTitle(), "Sign Up | LinkedIn");
 	}
