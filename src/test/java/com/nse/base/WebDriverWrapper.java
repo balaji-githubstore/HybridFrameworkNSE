@@ -8,6 +8,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
@@ -47,8 +48,8 @@ public class WebDriverWrapper {
 	}
 
 	@BeforeMethod
-	@Parameters({ "browser","url" })
-	public void setup(@Optional("ch") String browserName,@Optional("https://opensource-demo.orangehrmlive.com/") String url, Method method) throws IOException {
+	@Parameters({ "browser", "url", "headless" })
+	public void setup(@Optional("ch") String browserName,@Optional("https://opensource-demo.orangehrmlive.com/") String url,@Optional("no") String headless, Method method) throws IOException {
 
 		extentTest = extent.createTest(method.getName());
 		
@@ -66,8 +67,15 @@ public class WebDriverWrapper {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		} else {
+			
+			ChromeOptions options=new ChromeOptions();
+			if(headless.equalsIgnoreCase("yes"))
+			{
+				options.addArguments("--headless");
+			}
+			
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 		}
 
 		driver.manage().window().maximize();
